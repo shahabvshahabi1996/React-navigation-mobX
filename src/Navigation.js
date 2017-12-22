@@ -28,7 +28,7 @@ const NavigationApp = StackNavigator({
         navigationOptions: {
             headerTitle: 'Info',
             headerStyle : {
-                backgroundColor : 'transparent',
+                backgroundColor : '#fff',
             }
         },
     },
