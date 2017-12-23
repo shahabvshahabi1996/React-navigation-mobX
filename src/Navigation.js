@@ -5,12 +5,14 @@ import React, {Component} from 'react';
 import Contacts from './Components/Conatcs';
 import ContactInfo from './Components/ContactInfo'; 
 
+import Store from './Store/ContactStore';
+
 const ConatcsComponent = (props) => {
-    return <Contacts {...props} Store="it's Amazing Dude!!!"/>
+    return <Contacts {...props} Store={Store}/>
 } 
 
 const ContactInfoComponent = props =>{
-    return <ContactInfo {...props} Store="it's great we can use mobx too"/>
+    return <ContactInfo {...props} Store={Store}/>
 }
 
 const NavigationApp = StackNavigator({
@@ -25,12 +27,9 @@ const NavigationApp = StackNavigator({
     },
     ContactInfo: {
         screen: ContactInfoComponent ,
-        navigationOptions: {
-            headerTitle: 'Info',
-            headerStyle : {
-                backgroundColor : '#fff',
-            }
-        },
+        navigationOptions: ({navigation}) => ({
+            title: `${navigation.state.params.name}'s Info`,
+        }),
     },
 });
     
