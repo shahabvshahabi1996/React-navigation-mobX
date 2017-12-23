@@ -26,11 +26,6 @@ export default class Contacts extends Component{
                     </Section>
                     )
                 })}
-                    {/* <Section onPress={()=>{navigate('ContactInfo')}}>
-                        <View>
-                            <Text>shahab</Text>
-                        </View>
-                    </Section> */}
             </View>
         )
     }
