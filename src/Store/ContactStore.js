@@ -1,17 +1,17 @@
 import { observable } from 'mobx';
 var data = [{
-    name : 'shahab'
+    givenName : 'shohari'
 },{
-    name : 'rana hamsarrii'
+    givenName : 'hamsarrii'
 },{
-    name : 'baba'
+    givenName : 'baba'
 },{
-    name : 'shahin'
+    givenName : 'shahin'
 },{
-    name : 'maman'
+    givenName : 'maman'
 }];
 class ContactStore {
-    @observable contacts = data; 
+    @observable contacts = []; 
     @observable selectedContact = null;
 
     selectContact(index){
